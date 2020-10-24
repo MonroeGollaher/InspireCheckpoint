@@ -13,9 +13,22 @@
 <body>
     <nav class="navbar navbar-light bg-dark">
         <span class="navbar-brand mb-0 h1 text-light">Inspire.</span>
+        <div id="weather" class="justify-content-end">
+        </div>
     </nav>
 
     <main class="container-fluid">
+
+        
+        <div class="jumbotron jumbotron-fluid bg-transparent" id="row">
+            <div class="container">
+                <h1 class="display-4">Good Morning, Monroe</h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+        
+
+        <!-- TODOS -->
         <div class="row">
             <form class="col-sm-12 col-md-6 mb-5" onsubmit="app.todoController.addTodo(event)">
                 <div class="form-group">

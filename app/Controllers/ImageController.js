@@ -2,7 +2,7 @@ import imageService from "../Services/ImageService.js";
 import { ProxyState } from "../AppState.js";
 
 function _drawImage() {
-    document.body.style.backgroundImage = `url(${ProxyState.image.url})`;  
+    document.body.style.backgroundImage = `url(${ProxyState.image.largeUrl})`;  
 }
 
 

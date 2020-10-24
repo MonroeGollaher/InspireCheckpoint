@@ -8,7 +8,7 @@ function _drawQuotes(){
 export default class QuoteController { 
     constructor(){
         ProxyState.on("quotes", _drawQuotes)
-        quoteService.getQuote()
+        quoteService.getQuotes()
     }
 
     getQuotes(){

@@ -10,5 +10,29 @@ export default class Weather {
 
     this.city = data.name
     this.kelvin = data.main.temp
+    this.weather = data.weather[0].main
+    this.weatherDesc = data.weather[0].description
+    this.icon = data.weather[0].icon
+  }
+
+  weatherConversion(){
+    let temp = ((this.kelvin - 273.15) * 1.8) + 32
+    return Math.floor(temp)
+  }
+
+  get WeatherTemplate(){
+    return /*html*/`
+    <div class="row weatherIcon">
+      <div class="col-6 d-flex flex-column justify-content-center">
+        <img class="" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
+      </div>
+        <div class="col-6 d-flex flex-column justify-content-center">
+          <div class="p-2">
+            <h3 class="text-light">${this.weatherConversion()}&deg;</h3>
+            <p>${this.city}</p>
+          </div>
+      </div>
+    </div>
+    `
   }
 }

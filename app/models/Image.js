@@ -10,11 +10,7 @@ export default class Image {
 
     get Template(){
         return /*html*/`
-            <style>
-            body {
-                background-image: ${this.url};
-            }
-            </style>
+
         `
     }
 }
