@@ -8,8 +8,14 @@ export default class Quote {
 
     get QuoteTemplate() {
         return /*html*/`
-        <h5>${this.body}</h5>
-        <h6>${this.author}</h6>
+        <blockquote class="blockquote">
+            <p class="text-light">
+                ${this.body} 
+            </p>
+            <footer class="blockquote-footer">
+                <p class="text-light">-${this.author}</p>
+            </footer>
+        </blockquote>
         `
       }
 }

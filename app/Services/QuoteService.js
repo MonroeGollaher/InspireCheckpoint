@@ -5,8 +5,11 @@ import { api } from "./AxiosService.js";
 let url = 'quotes'
 
 class QuoteService {
+    constructor(){
+        this.getQuotes()
+    }
 
-  async getQuote() {
+  async getQuotes() {
     console.log("hello from quote service");
     let res = await api.get(url);
     ProxyState.quotes = new Quote(res.data.quote);
