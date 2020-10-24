@@ -1,3 +1,16 @@
+import quoteService from "../Services/QuoteService.js"
+import {ProxyState} from "../AppState.js"
 
-//TODO Create methods for constructor, and rendering the quote to the page
-export default class QuoteController { }
+function _drawQuotes(){
+    // let template = ""
+    // let newQuote = ProxyState.quotes
+    // newQuote.forEach(q => template += q.QuoteTemplate)
+    // document.getElementById("quote").innerHTML = template
+}
+
+export default class QuoteController { 
+    constructor(){
+        ProxyState.on("quotes", _drawQuotes)
+        quoteService.getQuote()
+    }
+}

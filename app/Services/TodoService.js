@@ -7,9 +7,7 @@ let url = 'monroe/todos/'
 
 class TodoService {
   async getTodos() {
-    console.log("Getting the Todo List");
     let res = await api.get(url);
-    console.log(res)
     ProxyState.todos = res.data.data.map(td => new Todo(td))
   }
 

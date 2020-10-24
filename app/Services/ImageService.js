@@ -6,12 +6,12 @@ let url = 'images'
 
 //TODO create methods to retrieve data and save to the State
 class ImageService {
-    async getImages(){
-        let res = await api.get(url)
-        ProxyState.images = res.data.data.map(i => new Image(i))
-        console.log("getting images")
+    async getImages() {
+      console.log('Image Service')
+      let res = await api.get('images');
+      ProxyState.image = new Image(res.data);
     }
-}
+  }
 
 const imageService = new ImageService();
 export default imageService;
