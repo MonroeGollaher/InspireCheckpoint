@@ -11,41 +11,42 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-dark">
+    <nav class="navbar navbar-light bg-dark align-items-center">
         <span class="navbar-brand mb-0 h1 text-light">Inspire.</span>
         <div id="weather" class="justify-content-end">
+            
         </div>
     </nav>
 
     <main class="container-fluid">
 
-        
-        <div class="jumbotron jumbotron-fluid bg-transparent" id="row">
-            <div class="container">
-                <h1 class="display-4">Good Morning, Monroe</h1>
-                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        <div class="row d-flex align-items-center justify-content-center mainCont gradient">
+            <div class="col-6 text-center">
+                <h1 class="display-4 text-light">Good Morning, Monroe.</h1>
+                <div id="quote">
+                    
+                </div>
             </div>
         </div>
-        
 
         <!-- TODOS -->
-        <div class="row">
-            <form class="col-sm-12 col-md-6 mb-5" onsubmit="app.todoController.addTodo(event)">
+        <div class="row justify-content-end gradient">
+            <form class="col-sm-12 col-md-2 todoForm" onsubmit="app.todoController.addTodo(event)">
                 <div class="form-group">
-                    <input type="text" name="taskTitle" class="form-control mb-1" placeholder="Enter Task Here">
-                    <button type="submit" name="" id="" class="btn btn-primary btn-lg btn-block">Create</button>
+                    <input type="text" name="taskTitle" class="form-control" placeholder="Add Task Here">
+                    <!-- <button type="submit" name="" id="" class="btn btn-primary btn-lg btn-block">Create</button> -->
+                    <ul class="card rounded justify-content-between flex-column-reverse" id="todo">
+                    
+                    </ul>
                 </div>
-            </form>
-        </div>
-        <div id="todo">
-
+            </form>    
         </div>
         
+        
+
     </main>
     <footer class="container-fluid bg-transparent text-light">
-        <div id="quote">
-
-        </div>
+        
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="app/main.js" type="module"></script>

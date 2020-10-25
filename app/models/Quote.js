@@ -10,8 +10,8 @@ export default class Quote {
         return /*html*/`
         <div class="row justify-content-center">
             <blockquote class="blockquote">
-                <p class="text-light lead">${this.body}</p>
-                <p class="text-light">-${this.author}</p>
+                <p class="lead text-light">${this.body}</p>
+                <p class="lead text-light">-${this.author}</p>
             </blockquote>
         </div>
         

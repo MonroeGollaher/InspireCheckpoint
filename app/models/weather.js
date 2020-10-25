@@ -26,11 +26,9 @@ export default class Weather {
       <div class="col-6 d-flex flex-column justify-content-center">
         <img class="" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
       </div>
-        <div class="col-6 d-flex flex-column justify-content-center">
-          <div class="p-2">
-            <h3 class="text-light">${this.weatherConversion()}&deg;</h3>
-            <p>${this.city}</p>
-          </div>
+      <div class="col-6 d-flex flex-column justify-content-center">
+        <p class="text-light">${this.weatherConversion()}&deg;</p>
+        <p class="text-light">${this.city}</p>
       </div>
     </div>
     `

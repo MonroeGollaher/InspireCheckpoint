@@ -6,6 +6,10 @@ let url = 'monroe/todos/'
 
 
 class TodoService {
+
+  constructor(){
+    this.getTodos()
+  }
   async getTodos() {
     let res = await api.get(url);
     ProxyState.todos = res.data.data.map(td => new Todo(td))
@@ -20,12 +24,14 @@ class TodoService {
   async toggleTodoStatus(todoId) {
     let todo = await ProxyState.todos.find(todo => todo.id == todoId);
 
-    //TODO Make sure that you found a todo,
-    //		and if you did find one
-    //		change its completed status to whatever it is not (ex: false => true or true => false)
+    if(todo.completed){
+      todo.completed = false
+    } else {
+      todo.completed = true
+    }
 
     let res = await api.put(url + todoId, todo);
-    //TODO how do you trigger this change
+    this.getTodos()
   }
 
   async removeTodo(todoId) {

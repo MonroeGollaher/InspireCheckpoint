@@ -5,6 +5,32 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+ body {
+   margin: 0; 
+   padding: 0; 
+ }
+
+ ul {
+   list-style-type: none;
+ }
+
+ .mainCont {
+   height: 85vh;
+ }
+
+ .completed {
+   text-decoration: line-through;
+ }
+
+.gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+body {
+  background-position: center cover relative;
+}
+
 :root {
   --blue: blue;
   --indigo: indigo;
