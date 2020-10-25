@@ -23,13 +23,15 @@ export default class Weather {
   get WeatherTemplate(){
     return /*html*/`
     <div class="row weatherIcon">
-      <div class="col-6 d-flex flex-column justify-content-center">
-        <img class="" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
+      <div class="col-4">
+    
       </div>
-      <div class="col-6 d-flex flex-column justify-content-center">
-        <p class="text-light">${this.weatherConversion()}&deg;</p>
-        <p class="text-light">${this.city}</p>
+      <div class="col-8 d-flex align-items-center justify-content-end">
+        <img class="bw img-fluid my-auto" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
+        <h5 class="text-light">${this.city}</h5>
+        <h5 class="text-light">${this.weatherConversion()}&deg;</h5>
       </div>
+      
     </div>
     `
   }

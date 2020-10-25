@@ -31,6 +31,14 @@ body {
   background-position: center cover relative;
 }
 
+.weatherIcon {
+
+}
+
+/* * {
+  outline: 1px solid red;
+} */
+
 :root {
   --blue: blue;
   --indigo: indigo;
