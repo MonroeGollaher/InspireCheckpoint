@@ -19,6 +19,13 @@ class TodoService {
     let res = await api.post(url, todo);
     ProxyState.todos.push(new Todo(res.data.data))
     ProxyState.todos = ProxyState.todos
+    Swal.fire({
+      position: 'bottom-end',
+      icon: 'success',
+      title: 'Task added',
+      showConfirmButton: false,
+      timer: 1500
+    })
   }
 
   async toggleTodoStatus(todoId) {

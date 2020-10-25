@@ -10,7 +10,7 @@ export default class Todo {
     if(this.completed){
       return /*html*/`
     <div class="row align-items-center">
-      <div class="col-8">
+      <div class="col-7">
           <li class="completed ">- </i> ${this.description}</li>    
       </div>
       <div class="col-1">
@@ -24,7 +24,7 @@ export default class Todo {
     } else {
       return /*html*/`
     <div class="row align-items-center">
-      <div class="col-8">
+      <div class="col-7">
           <li class="">- </i> ${this.description}</li>    
       </div>
       <div class="col-1">

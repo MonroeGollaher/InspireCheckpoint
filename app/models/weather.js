@@ -27,9 +27,9 @@ export default class Weather {
     
       </div>
       <div class="col-8 d-flex align-items-center justify-content-end">
-        <img class="bw img-fluid my-auto" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
-        <h5 class="text-light">${this.city}</h5>
+        <h5 class="text-light mr-1">${this.city}</h5>
         <h5 class="text-light">${this.weatherConversion()}&deg;</h5>
+        <img class="bw img-fluid my-auto" src="http://openweathermap.org/img/w/${this.icon}.png" alt=""/>
       </div>
       
     </div>

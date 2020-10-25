@@ -16,7 +16,7 @@
  }
 
  .mainCont {
-   height: 85vh;
+   height: 90vh;
  }
 
  .completed {
@@ -28,7 +28,7 @@
 }
 
 body {
-  background-position: center cover relative;
+  background-position: center cover relative stretch;
 }
 
 .weatherIcon {
